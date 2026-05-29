@@ -19,9 +19,9 @@ WORKDIR /app
 
 RUN git clone https://github.com/beefproject/beef.git .
 
-RUN gem install bundler
+RUN sed -i 's/host: "127.0.0.1"/host: "0.0.0.0"/g' config.yaml
 
-RUN bundle config set without development test
+RUN gem install bundler
 
 RUN bundle config build.nokogiri --use-system-libraries
 
