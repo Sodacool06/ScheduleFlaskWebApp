@@ -1,1 +1,12 @@
-
+{
+  "name": "butcher-webserver",
+  "version": "1.0.0",
+  "description": "Static web server for Render deployment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
